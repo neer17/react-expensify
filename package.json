@@ -8,6 +8,8 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^1.0.0",
+    "express": "^4.16.3",
+    "extract-text-webpack-plugin": "4.0.0-alpha.0",
     "live-server": "^1.2.0",
     "moment": "^2.22.2",
     "node-sass": "^4.9.2",
@@ -33,10 +35,13 @@
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/",
-    "build": "webpack",
-    "dev-server": "webpack-dev-server"
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
+    "dev-server": "webpack-dev-server",
+    "start": "node server/server.js",
+    "heroku-postBuild": "yarn run build:prod"
   },
   "devDependencies": {
-    "webpack-cli": "^3.0.8"
+    "webpack-cli": "^3.0.8" 
   }
 }
