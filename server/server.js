@@ -11,7 +11,7 @@ console.log(publicPath);
 
 app.use(express.static(publicPath));
 
-let port = process.env.PROCESS || 3000; 
+let port = process.env.PORT || 3000; 
 
 //  for any page that is not present in "public" folder rendering index.html
 app.get('*', (req, res) => {
