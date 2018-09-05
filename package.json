@@ -42,6 +42,7 @@
     "heroku-postbuild": "yarn run build:prod"
   },
   "devDependencies": {
-    "webpack-cli": "^3.0.8" 
+    "chalk": "^2.4.1",
+    "webpack-cli": "^3.0.8"
   }
 }
