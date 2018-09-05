@@ -39,7 +39,7 @@
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
     "start": "node server/server.js",
-    "heroku-postBuild": "yarn run build:prod"
+    "heroku-postbuild": "yarn run build:prod"
   },
   "devDependencies": {
     "webpack-cli": "^3.0.8" 
