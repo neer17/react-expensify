@@ -4,7 +4,10 @@ const path = require('path');
 let app = express();
 
 //  rendering this whole folder
-let publicPath = path.join(__dirname, '..', public);
+let publicPath = path.join(__dirname, '..', 'public');
+
+console.log(publicPath);
+
 
 app.use(express.static(publicPath));
 
@@ -23,5 +26,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log('app is up on porrt 3000');
+    console.log('app is up on port 3000');
 });
